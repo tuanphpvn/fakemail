@@ -1,6 +1,6 @@
 <?php
-    require_once('class.phpmailer.php');
-    require_once('class.smtp.php');
+    require_once(__DIR__.'/class.phpmailer.php');
+    require_once(__DIR__.'/class.smtp.php');
 
     $mail = new PHPMailer();
     $mail->addAddress('test@foobar.org');
@@ -11,7 +11,7 @@
     $mail->Subject = 'Hello';
     $mail->IsSmtp();
     $mail->Host = 'localhost';
-    $mail->Port = 9090;
+    $mail->Port = 8025;
     if ($mail->Send())
     {
       print "Mail sent\n";

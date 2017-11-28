@@ -15,7 +15,7 @@
         }
     }
 
-    $test =& new AllFakemailTests();
+    $test = new AllFakemailTests();
     if (SimpleReporter::inCli()) {
         exit ($test->run(new TextReporter()) ? 0 : 1);
     }
